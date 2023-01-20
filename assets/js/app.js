@@ -1,10 +1,6 @@
-let menuToggle = document.querySelector('.toggle-text');
+let menuToggle = document.querySelector('.navbar-toggle');
+let navigation = document.querySelector('.flex');
 menuToggle.onclick = function(){
-    menuToggle.classList.toggle('active');
-    navigation.classList.toggle('active');
-}
-let textToggle = document.querySelector('.toggle-icon');
-textToggle.onclick = function(){
-    textToggle.classList.toggle('active');
-    navigation.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+    navigation.classList.toggle('open');
 }

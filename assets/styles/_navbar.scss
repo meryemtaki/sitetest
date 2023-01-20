@@ -20,69 +20,90 @@
             }
         }
 
+    
         .navbar-toggle{
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            position: relative;
+            z-index: 1;
+
             .toggle-icon{
-                cursor: pointer;
-                .toggle-line-menu{
-                    color: $primary-color;
-                    background-color:$secondry-color;
+                margin-right: 10px;
+                .toggle-line{
+                    background-color: $secondry-color;
                     height: 2px;
                     position: relative;
                     transition: .5s;
                     width: 25px;
-                    &:first-of-type {
-                        transform: scaleX(.5);
-                        transform-origin: left;
-                    }
-                    &:nth-of-type(2){
-                        width: 25px;
-                    }
+                    &:first-of-type,
                     &:nth-of-type(3){
                         transform: scaleX(.5);
-                        transform-origin: right;
+                    }
+                    &:first-of-type{
+                        transform-origin: left;
+                    }
+                    &:nth-of-type(2) {
+                        width: 25px;
                     }
                     &:not(:first-child) {
                         margin-top: 5px;
                     }
+                    &:nth-of-type(3) {
+                        transform-origin: right;
+                    }
                 }
+            }
+            &:hover .toggle-line:first-of-type{
+                transform: scale(0.2,1.7) translateY(4px);
+            }
+            &:hover .toggle-line:nth-of-type(2),.toggle-line:nth-of-type(3){
+                border-radius: 3px;
+                transform: scale(0.2,1.7);
+            }
+            &:hover .toggle-line:nth-of-type(3){
+                transform: scale(0.2,1.7) translateY(-4px);
             }
 
             .toggle-text{
-                span{
-                    color: $secondry-color;
-                }
+                $animate-trans: translateY(5px) rotateX(75deg);
+                position: relative;
 
-                     position: relative;
-                    background: transparent;
-                    border-radius:10px ;
-                    cursor: pointer;
-                    display: flex;
-                    
-            
-                
-            
-                &.active{
-                    background-color: transparent;
+                .text-open,.text-close{
+                    visibility: hidden;
+                    will-change: transform;
                 }
-                & .toggle-icon{
+                .text-open,.text-close{
+                    left: 0;
                     position: absolute;
-                    color: black;
-                    font-size: 34px;
-                    display: none;
+                    top: 0;
                 }
-            
-                &.toggle-icon.Menu,
-                &.active .toggle-icon.Close
-                {
-                    display: block;
-                }
-            
-                &.active .toggle-icon.Menu,
-                &.toggle-icon.Close
-                {
-                    display:none;
-                }
-            
+            }
+
+            &:hover .text-menu{
+                opacity: 0;
+                transform: $animate-trans;
+                visibility: hidden;
+            }
+            &:hover.open .text-close, &:hover:not(.open) .text-open{
+                opacity: 1;     
+                transform: none;
+                visibility: visible;
+            }
+            &.open .toggle-line:first-of-type{
+                transform: scale(1) rotate(45deg)!important;
+                transform-origin: bottom!important;
+            }
+            &.open .toggle-line:nth-of-type(2){
+                display: none;
+                transform: scale(0)!important;
+            }
+            &.open .toggle-line:nth-of-type(3){
+                transform: scale(1) rotate(-45deg)!important;
+                transform-origin: top!important;
+            }
+            &.open .toggle-line:first-of-type, &.open .toggle-line:nth-of-type(3){
+                margin-top: 0 !important;
             }
         }
 }
