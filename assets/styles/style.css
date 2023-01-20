@@ -1,0 +1,82 @@
+.navbar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  padding-top: 22px;
+  position: fixed;
+  top: 0;
+  transition-duration: 0.5s;
+  width: 100%;
+  z-index: 10;
+}
+.navbar .logo img {
+  width: 50px;
+  height: 50px;
+}
+.navbar .navbar-toggle .toggle-icon {
+  cursor: pointer;
+}
+.navbar .navbar-toggle .toggle-icon .toggle-line-menu {
+  color: #000;
+  background-color: #fff;
+  height: 2px;
+  position: relative;
+  transition: 0.5s;
+  width: 25px;
+}
+.navbar .navbar-toggle .toggle-icon .toggle-line-menu:first-of-type {
+  transform: scaleX(0.5);
+  transform-origin: left;
+}
+.navbar .navbar-toggle .toggle-icon .toggle-line-menu:nth-of-type(2) {
+  width: 25px;
+}
+.navbar .navbar-toggle .toggle-icon .toggle-line-menu:nth-of-type(3) {
+  transform: scaleX(0.5);
+  transform-origin: right;
+}
+.navbar .navbar-toggle .toggle-icon .toggle-line-menu:not(:first-child) {
+  margin-top: 5px;
+}
+.navbar .navbar-toggle .toggle-text {
+  position: relative;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+}
+.navbar .navbar-toggle .toggle-text span {
+  color: #fff;
+}
+.navbar .navbar-toggle .toggle-text.active {
+  background-color: transparent;
+}
+.navbar .navbar-toggle .toggle-text .toggle-icon {
+  position: absolute;
+  color: black;
+  font-size: 34px;
+  display: none;
+}
+.navbar .navbar-toggle .toggle-text.toggle-icon.Menu, .navbar .navbar-toggle .toggle-text.active .toggle-icon.Close {
+  display: block;
+}
+.navbar .navbar-toggle .toggle-text.active .toggle-icon.Menu, .navbar .navbar-toggle .toggle-text.toggle-icon.Close {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */
