@@ -1,0 +1,55 @@
+.section-about{
+    padding: 40px;
+    .box-text{
+        position: relative;
+        z-index: 1;
+        h2{
+            margin-top: 5%;
+            font-size: $title-section;
+            letter-spacing: .01em;
+            line-height: 42px;
+            white-space: pre-line;
+            margin-bottom: 40px;
+            margin-right: -70px;
+            text-align: right;
+            color: $secondry-color;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        h5{
+            margin-bottom: 5%;
+            font-size: $title-block;
+            text-transform: uppercase;
+            color: $blue-color;
+            font-weight: 600;
+        }
+        p{
+            color: $secondry-color;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        .experience{
+            margin-top: 4%;
+            align-items: center;
+            display: flex;
+            .number{
+                color: $secondry-color;
+                font-size: 120px;
+                font-weight: 700;
+                line-height: 90px;
+                margin-right: 20px;
+            }
+            .year{
+                font-size: 20px;
+                color: $orange-color;
+            }
+        }
+    }
+
+    .box-img{
+        padding: 80px;
+        text-align: center;
+        background-color: #090909;
+    }
+}
