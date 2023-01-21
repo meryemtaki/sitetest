@@ -14,4 +14,16 @@ body{
     background-color: $primary-color;
 }
 
+.cursor {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 30px;
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    transform-origin: left top;
+    width: 30px;
+    z-index: 999999;
+}
 

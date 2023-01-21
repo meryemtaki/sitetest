@@ -6,8 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: 22px;
-    padding-top: 22px;
+    padding: 22px 50px;
     position: fixed;
     top: 0;
     transition-duration: .5s;
@@ -15,8 +14,9 @@
     z-index: 10;
         .logo{
             img{
-                width: 50px;
-                height: 50px;
+                width: 65px;
+                height: 55px;
+                filter: grayscale(1) brightness(5);
             }
         }
 
@@ -54,41 +54,62 @@
                     }
                 }
             }
-            &:hover .toggle-line:first-of-type{
-                transform: scale(0.2,1.7) translateY(4px);
+            &:hover {
+                .toggle-line:first-of-type{
+                    transform: scale(0.2,1.7) translateY(4px);
+                }
             }
-            &:hover .toggle-line:nth-of-type(2),.toggle-line:nth-of-type(3){
-                border-radius: 3px;
-                transform: scale(0.2,1.7);
+            &:hover {
+                .toggle-line:nth-of-type(2),.toggle-line:nth-of-type(3){
+                    border-radius: 3px;
+                    transform: scale(0.2,1.7);
+                }
             }
-            &:hover .toggle-line:nth-of-type(3){
-                transform: scale(0.2,1.7) translateY(-4px);
+            &:hover {
+                .toggle-line:nth-of-type(3){
+                    transform: scale(0.2,1.7) translateY(-4px);
+                }
             }
 
             .toggle-text{
                 $animate-trans: translateY(5px) rotateX(75deg);
                 position: relative;
+                color: rgba(255, 255, 255, 0.68);
 
-                .text-open,.text-close{
-                    visibility: hidden;
-                    will-change: transform;
+                div{
+                    transition: all .3s ease-in-out;
                 }
-                .text-open,.text-close{
-                    left: 0;
+                .text-menu{
+                    scale: 1;
+                }
+                .text-open,
+                .text-close{
                     position: absolute;
                     top: 0;
+                    left: 0;
+                    scale: 0;
+                    will-change: transform;
+
                 }
             }
 
-            &:hover .text-menu{
-                opacity: 0;
-                transform: $animate-trans;
-                visibility: hidden;
-            }
-            &:hover.open .text-close, &:hover:not(.open) .text-open{
-                opacity: 1;     
-                transform: none;
-                visibility: visible;
+            &:hover {
+                .text-menu{
+                    scale: 0;
+                    transform: $animate-trans;
+                }
+                &.open{
+                    .text-close{
+                        scale: 1;
+                        transform: none;
+                    }
+                }
+                &:not(.open){
+                    .text-open{
+                        scale: 1;
+                        transform: none;
+                    }
+                }
             }
             &.open .toggle-line:first-of-type{
                 transform: scale(1) rotate(45deg)!important;
