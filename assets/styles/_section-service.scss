@@ -1,5 +1,13 @@
+@mixin res($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
 .section-service{
     padding: 40px;
+    @include res($screen-sm-min){
+        padding: 20px;
+    }
     .service-head{
         p{
             font-size: 12px;
@@ -25,7 +33,6 @@
                 display: block;
                 position: absolute;
                 top: 50%;
-                -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
                 background: $orange-color;
                 height: 1px;
@@ -37,11 +44,17 @@
             font-size: $title-section;
             color: $secondry-color;
             margin-bottom: 5%;
+            @include res($screen-sm-min){
+                font-size: $title-block;
+            }
         }
 
     }
     .box{
         margin-bottom: 5%;
+        @include res($screen-sm-min){
+            text-align: center;
+        }
         img{
             border-radius: 50%;
             padding-bottom: 15px;
@@ -58,6 +71,10 @@
             color: $secondry-color;
             font-size: 15px;
             line-height: 25px;
+            @include res($screen-sm-min){
+                width: 100%;
+                font-size: 12px;
+            }
         }
     }
 
@@ -69,20 +86,37 @@
                 top: 10%;
                 position: absolute;
                 z-index: 10;
+                @include res($screen-sm-min){
+                    width: 300px;
+                    position: relative;
+                    margin-bottom: 5%;
+                    background-color: #090909;
+                    padding: 25px;
+                    width: 90%;
+                }
             }
         }
         .text-bgservice{
             background: #090909;
             padding: 150px;
+            @include res($screen-sm-min){
+                padding: 12px;
+            }
             h2{
                 font-size: $title-section;
                 color: $secondry-color;
                 margin-bottom: 5%;
+                @include res($screen-sm-min){
+                    font-size: 15px;
+                }
             }
             p{
                 color: $secondry-color;
                 font-size: 15px;
                 line-height: 25px;
+                @include res($screen-sm-min){
+                    font-size: 10px;
+                }
             }
         }
     }

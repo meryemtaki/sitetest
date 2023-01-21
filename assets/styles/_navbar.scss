@@ -71,7 +71,6 @@
             }
 
             .toggle-text{
-                $animate-trans: translateY(5px) rotateX(75deg);
                 position: relative;
                 color: rgba(255, 255, 255, 0.68);
 
@@ -95,7 +94,6 @@
             &:hover {
                 .text-menu{
                     scale: 0;
-                    transform: $animate-trans;
                 }
                 &.open{
                     .text-close{

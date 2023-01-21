@@ -1,12 +1,19 @@
 @import './variables';
+
+@mixin res($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
+
 .section-home{
    .home-img{
-    img{
-        width: 100%;
-        object-fit: cover;
-        height: 680px;
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 680px;
+        }
     }
-   }
    .head-content{
         top: 8%;
         justify-content: center;
@@ -28,19 +35,25 @@
                 font-size: 70px;
                 line-height: 70px;
                 letter-spacing: 1.2px;
+                @include res($screen-sm-min){
+                    font-size: 30px;
+                    line-height: 30px;
+                }
             }
             span{
                 font-size: 70px;
                 line-height: 70px;
                 clip-path: inset(58% 6px -10px);
-                width: 100%;
-                left: 0px;
-                top: 0px;
                 color: $orange-color;
+                @include res($screen-sm-min){
+                    font-size: 30px;
+                    line-height: 30px;
+                }
             }
 
         }
         .head-text{
+
             position: relative;
             p{
                 position: absolute;
@@ -49,15 +62,20 @@
                 font-size: 25px;
                 line-height: 25px;
                 letter-spacing: 1.2px;
+                @include res($screen-sm-min){
+                    font-size: 15px;
+                    line-height: 15px;
+                }
             }
             span{
                 font-size: 25px;
                 line-height: 25px;
                 clip-path: inset(58% 0px -10px);
-                width: 100%;
-                left: 0px;
-                top: 0px;
                 color: $blue-color;
+                @include res($screen-sm-min){
+                    font-size: 15px;
+                    line-height: 15px;
+                }
             }
         }
         span{

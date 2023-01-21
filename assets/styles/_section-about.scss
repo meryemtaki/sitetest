@@ -1,5 +1,13 @@
+@mixin res($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
 .section-about{
     padding: 40px;
+    @include res($screen-sm-min){
+        padding: 20px;
+    }
     .box-text{
         position: relative;
         z-index: 1;
@@ -15,6 +23,11 @@
             color: $secondry-color;
             font-weight: 700;
             text-transform: uppercase;
+            @include res($screen-sm-min){
+                font-size: $title-block;
+                text-align: left;
+                margin-right: 0;
+            }
         }
         h5{
             margin-bottom: 5%;
@@ -27,6 +40,9 @@
             color: $secondry-color;
             font-size: 15px;
             line-height: 25px;
+            @include res($screen-sm-min){
+                font-size: 12px;
+            }
         }
 
         .experience{
@@ -39,10 +55,16 @@
                 font-weight: 700;
                 line-height: 90px;
                 margin-right: 20px;
+                @include res($screen-sm-min){
+                    font-size: 60px;
+                    text-align: left;
+                }
             }
             .year{
                 font-size: 20px;
                 color: $orange-color;
+                font-weight: 700;
+                margin-top: 10px;
             }
         }
     }
@@ -51,5 +73,14 @@
         padding: 80px;
         text-align: center;
         background-color: #090909;
+        @include res($screen-sm-min){
+            padding: 30px;
+        }
+        img{
+            @include res($screen-sm-min){
+                width: 200px;
+            }
+        }
+        
     }
 }
