@@ -1,8 +1,10 @@
 let menuToggle = document.querySelector('.navbar-toggle');
 let navigation = document.querySelector('.flex');
+let html = document.querySelector('body');
 menuToggle.onclick = function(){
     menuToggle.classList.toggle('open');
     navigation.classList.toggle('open');
+    html.classList.toggle('overflow')
 }
 
 function move(){
