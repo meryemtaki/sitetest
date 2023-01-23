@@ -37,7 +37,7 @@
             font-weight: 600;
         }
         p{
-            color: $secondry-color;
+            color: $p-dark;
             font-size: 15px;
             line-height: 25px;
             @include res($screen-sm-min){
@@ -72,7 +72,7 @@
     .box-img{
         padding: 80px;
         text-align: center;
-        background-color: #090909;
+        background-color: $bg-dark ;
         @include res($screen-sm-min){
             padding: 30px;
         }

@@ -3,7 +3,10 @@
 @import './section-about';
 @import './section-home';
 @import './section-service';
+@import './section-activitie';
+@import './section-sector';
 @import './footer';
+
 
 *{
     padding: 0;
@@ -29,6 +32,10 @@ body{
     transform-origin: left top;
     width: 30px;
     z-index: 999999;
+}
+.swiper {
+    width: 600px;
+    height: 300px;
 }
 
 // Small tablets and large smartphones (landscape view)

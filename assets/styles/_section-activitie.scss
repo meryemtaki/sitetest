@@ -1,0 +1,88 @@
+@mixin res($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
+
+.section-activitie{
+    padding: 40px;
+    .service-head{
+        p{
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding-left: 70px;
+            position: relative;
+            text-transform: uppercase;
+            color: $p-dark;
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $orange-color;
+                border-radius: 50%;
+                height: 5px;
+                left: 0;
+                width: 5px;
+            }
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: $orange-color;
+                height: 1px;
+                left: 5px;
+                width: 55px;
+            }
+        }
+        h2{
+            margin-top: 5%;
+            font-size: $title-section;
+            letter-spacing: .01em;
+            line-height: 42px;
+            margin-bottom: 40px;
+            color: $secondry-color;
+            font-weight: 700;
+            text-transform: uppercase;
+            @include res($screen-sm-min){
+                font-size: $title-block;
+            }
+        }
+
+    }
+
+    .actCard{
+        border-radius: 15px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        &:hover{
+            filter: drop-shadow(0 0 30px rgba(255,74,23,.5));
+            transition: .5s;
+
+        }
+        img{
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .text-card{
+            left: 0;
+            padding: 45px 25px 0;
+            position: absolute;
+            top: 0;
+            p{
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 1.5em;
+                margin: 0;
+                color: rgb(222, 217, 217);
+            }
+        }
+    }    
+}

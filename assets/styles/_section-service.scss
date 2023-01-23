@@ -16,6 +16,7 @@
             padding-left: 70px;
             position: relative;
             text-transform: uppercase;
+            color: $p-dark;
             &::before{
                 content: "";
                 display: block;
@@ -43,7 +44,13 @@
         h2{
             font-size: $title-section;
             color: $secondry-color;
-            margin-bottom: 5%;
+            margin-top: 5%;
+            font-size: 42px;
+            letter-spacing: .01em;
+            line-height: 42px;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
             @include res($screen-sm-min){
                 font-size: $title-block;
             }
@@ -68,7 +75,7 @@
         }
         p{
             width: 70%;
-            color: $secondry-color;
+            color: $p-dark;
             font-size: 15px;
             line-height: 25px;
             @include res($screen-sm-min){
@@ -90,14 +97,14 @@
                     width: 300px;
                     position: relative;
                     margin-bottom: 5%;
-                    background-color: #090909;
+                    background-color: $bg-dark ;
                     padding: 25px;
                     width: 90%;
                 }
             }
         }
         .text-bgservice{
-            background: #090909;
+            background: $bg-dark ;
             padding: 150px;
             @include res($screen-sm-min){
                 padding: 12px;
@@ -105,17 +112,23 @@
             h2{
                 font-size: $title-section;
                 color: $secondry-color;
-                margin-bottom: 5%;
+                margin-top: 5%;
+                font-size: 42px;
+                letter-spacing: .01em;
+                line-height: 42px;
+                margin-bottom: 40px;
+                font-weight: 700;
+                text-transform: uppercase;
                 @include res($screen-sm-min){
-                    font-size: 15px;
+                    font-size: 22px;
                 }
             }
             p{
-                color: $secondry-color;
+                color: $p-dark;
                 font-size: 15px;
                 line-height: 25px;
                 @include res($screen-sm-min){
-                    font-size: 10px;
+                    font-size: 12px;
                 }
             }
         }
