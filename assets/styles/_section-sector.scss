@@ -1,37 +1,11 @@
+@import './variables';
+@mixin res($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
 .section-sector{
     padding: 40px;
-    span{
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        padding-left: 70px;
-        position: relative;
-        text-transform: uppercase;
-        color: $p-dark;
-        &::before{
-            content: "";
-            display: block;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: $orange-color;
-            border-radius: 50%;
-            height: 5px;
-            left: 0;
-            width: 5px;
-        }
-        &::after{
-            content: "";
-            display: block;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: $orange-color;
-            height: 1px;
-            left: 5px;
-            width: 55px;
-        }
-    }
     .slider-wrap1{
         margin-top: 5%;
         ul{
@@ -51,15 +25,24 @@
                     position: relative;
                     z-index: 1;
                     background : $bg-dark;
+                    @include res($screen-sm-min){
+                        
+                    }
                     h4{
                         font-size: $title-block;
                         font-weight: 600;
                         letter-spacing: 2.5px;
                         color: $secondry-color;
+                        @include res($screen-sm-min){
+                            font-size: 12px;
+                        }
                     }
                     p{
                         margin-top: 15px;
                         color: $p-dark;
+                        @include res($screen-sm-min){
+                            font-size: 11px;
+                        }
                     }
                 }
             }

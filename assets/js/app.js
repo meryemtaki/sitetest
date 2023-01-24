@@ -13,5 +13,14 @@ $('.slide').slick({
     slidesToShow: 2.5,
     slidesToScroll: 1,
     autoplaySpeed: 2000,
+    responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+    ],
 });
           

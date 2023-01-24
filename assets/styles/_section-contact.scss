@@ -1,0 +1,98 @@
+@import './variables';
+@mixin res($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
+.section-contact{
+    padding: 40px;
+    
+   .right{
+        background: $bg-dark;
+        padding: 60px 30px;
+        p{
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $p-dark;
+        }
+        h4{
+            color: #fff;
+            margin-top: 5%;
+            font-size: $title-block;
+            letter-spacing: .01em;
+            line-height: 42px;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            @include res($screen-sm-min){
+                font-size: 15px;
+            }
+        }
+        ul{
+            li{
+                margin-bottom: 5%;
+                span{
+                    color: $orange-color;
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    width: 130px;
+                    display: inline-block;
+                    @include res($screen-sm-min){
+                        width: 100%;
+                    }
+                }
+                a{
+                    color: $secondry-color;
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        @include res($screen-sm-min){
+            margin-bottom: 10%;
+        }
+   }
+    form{
+        label{
+            color: $secondry-color;
+            width:120px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        input,textarea{
+            background-color: $bg-dark;
+            border: 1px solid $secondry-color;
+            border-radius: 10px;
+            height: 30px;
+        }
+        textarea{
+            width: 566px;
+            height: 170px;
+            display: block;
+            margin-bottom: 5%;
+            @include res($screen-sm-min){
+                width: 300px;
+                height: 150px;
+            }
+        }
+        button{
+            background: $orange-color;
+            padding:10px;
+            border: 1px solid $orange-color;
+            border-radius: 10px;
+            color: $secondry-color;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+    #map{
+        margin-top: 5%;
+    }
+}

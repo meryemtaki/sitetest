@@ -1,11 +1,9 @@
 @import './variables';
-
 @mixin res($screen){
     @media screen and (max-width: $screen){
         @content;
     }
 }
-
 .section-home{
    .home-img{
         img{
