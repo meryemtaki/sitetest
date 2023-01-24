@@ -1,0 +1,36 @@
+
+@mixin res($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
+
+.section-estimate{
+    padding: 40px;
+    h2{
+        color: $secondry-color;
+        margin-top: 5%;
+        font-size: $title-section;
+        letter-spacing: .01em;
+        line-height: 42px;
+        margin-bottom: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    h5{
+        color: $secondry-color;
+        margin-top: 5%;
+        font-size: $title-block;
+        line-height: 42px;
+        margin-bottom: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    form{
+        label{
+            width: 100%;
+        }
+    }
+}

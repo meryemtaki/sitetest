@@ -5,73 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/styles/slick-theme.css">
+    <link rel="stylesheet" href="./assets/styles/slick.css">
+
     <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="move();">
     <div class="cursor" id="cursor"></div>
 
-    <div class="content">
+    <header class="navbar">
+        <div class="logo">
+            <a href="Home.html"><img src="./assets/media/logo.png" alt=""></a>
+            
+        </div>
 
-        <header class="navbar">
-            <div class="logo">
-                <a href="Home.html"><img src="./assets/media/logo.png" alt=""></a>
-                
-            </div>
-    
-            <div class="navbar-menu">
-                <div class="flex">
-                    <ul class="left">
-                        <li><a href="Sactivitie.html"> <span>01.</span> Sectors Activities</a></li>
-                        <li><a href="About.html"> <span>02.</span> In Regards To</a></li>
-                        <li><a href="#"> <span>03.</span> Our Services</a></li>
-                        <li><a href="#"> <span>04.</span> Estimate</a></li>
-                        <li><a href="#"> <span>05.</span> SSW Movies</a></li>
-                        <li><a href="Contact.html"> <span>06.</span> Contact</a></li>
-                    </ul>
-                    <div class="right">
-                        <div class="box-nav">
-                            <span>Adress</span>
-                            <p>60, BD Moulay Ismail Etage 1 <br> App N° 10 Res ALYA Imm A, Casablanca 20303</p>
-                        </div>
-                        <div class="box-nav">
-                            <span>Contact</span><br>
-                            <a href="tel:(+212) 522 317 931">Phone: (+212) 522 317 931</a> <br>
-                            <a href="mailto:contact@smatshipways.com">Email: contact@smatshipways.com</a>
-        
-                        </div>
-                        <div class="box-nav">
-                            <span>Follow Us</span>
-                        </div>
-                        
-                        
+        <div class="navbar-menu">
+            <div class="flex">
+                <ul class="left">
+                    <li><a href="Sactivitie.html"> <span>01.</span> Sectors Activities</a></li>
+                    <li><a href="About.html"> <span>02.</span> In Regards To</a></li>
+                    <li class="menu-item-child">
+                        <a href="#"> <span>03.</span> Our Services</a>
+                        <span class="arrow">+</span>
+                        <ul class="submenu">
+                            <li><a href="Atransport.html"><span>01.</span>Air Transport</a></li>
+                            <li><a href="Ttransport.html"><span>02.</span>Truck Transport</a></li>
+                            <li><a href="Mtransport.html"><span>03.</span>Maritime Transport</a></li>
+                            <li><a href="Dtransport.html"><span>04.</span>Domestic Transport</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Estimate.html"> <span>04.</span> Estimate</a></li>
+                    <li><a href="#"> <span>05.</span> SSW Movies</a></li>
+                    <li><a href="Contact.html"> <span>06.</span> Contact</a></li>
+                </ul>
+                <div class="right">
+                    <div class="box-nav">
+                        <span>Adress</span>
+                        <p>60, BD Moulay Ismail Etage 1 <br> App N° 10 Res ALYA Imm A, Casablanca 20303</p>
                     </div>
-                </div>
-                
-            </div>
+                    <div class="box-nav">
+                        <span>Contact</span><br>
+                        <a href="tel:(+212) 522 317 931">Phone: (+212) 522 317 931</a> <br>
+                        <a href="mailto:contact@smatshipways.com">Email: contact@smatshipways.com</a>
     
-            <div class="navbar-toggle">
-                <div class="toggle-icon">
-                    <div class="toggle-line"></div>
-                    <div class="toggle-line"></div>
-                    <div class="toggle-line"></div>
-                </div>
-    
-    
-                <div class="toggle-text">
-                    <div class="text-menu">
-                        <span>Menu</span>
                     </div>
-                    <div class="text-open">
-                        <span>Open</span>
+                    <div class="box-nav">
+                        <span>Follow Us</span>
                     </div>
-                    <div class="text-close">
-                        <span>Close</span>
-                    </div>
+                    
+                    
                 </div>
             </div>
-    
-        </header>
+            
+        </div>
+
+        <div class="navbar-toggle">
+            <div class="toggle-icon">
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+            </div>
+
+
+            <div class="toggle-text">
+                <div class="text-menu">
+                    <span>Menu</span>
+                </div>
+                <div class="text-open">
+                    <span>Open</span>
+                </div>
+                <div class="text-close">
+                    <span>Close</span>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="content">
 
         <div class="section-contact">
                 <p class="title-section">Cantact</p>
@@ -190,7 +201,8 @@
 
     
 
-
+    <script src="./bootstrap/jquery-3.5.1.slim.min.js"></script>
+    <script src="./bootstrap/slick.min.js"></script>
     <script src="./bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>

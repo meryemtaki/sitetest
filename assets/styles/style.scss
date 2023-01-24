@@ -6,6 +6,8 @@
 @import './section-activitie';
 @import './section-sector';
 @import './section-contact';
+@import './section-estimate';
+@import './section-business';
 @import './footer';
 
 
@@ -67,6 +69,54 @@ body{
         left: 5px;
         width: 55px;
     }
+}
+
+label{
+    color: $secondry-color;
+    width:120px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+input,textarea{
+    background-color: $bg-dark;
+    border: 1px solid $secondry-color;
+    border-radius: 10px;
+    height: 30px;
+    margin-bottom: 3%;
+    height: 40px;
+}
+button{
+    background: $orange-color;
+    padding:10px;
+    border: 1px solid $orange-color;
+    border-radius: 10px;
+    color: $secondry-color;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    top: 50px;
+}
+textarea{
+    width: 566px;
+    height: 170px;
+    display: block;
+    margin-bottom: 5%;
+    @include res($screen-sm-min){
+        width: 300px;
+        height: 150px;
+    }
+}
+select{
+    width: 100%;
+    background: $bg-dark;
+    color: $secondry-color;
+    height: 40px;
+    border: 1px solid $secondry-color;
+    border-radius: 10px;
+    margin-bottom: 3%;
 }
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;

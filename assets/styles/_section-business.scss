@@ -1,0 +1,66 @@
+@import './variables';
+@mixin res($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
+.section-home{
+    .home-img{
+        .bg-transp{
+            height: 400px;
+        }
+    }
+    .head-content{
+        top: -10%;
+    }
+}
+
+.section-service{
+    h4{
+        color: $secondry-color;
+        font-weight: 700;
+        font-size: $title-block;
+        text-align: center;
+    }
+    h5{
+        color: $p-dark;
+        font-size: 15px;
+        line-height: 25px;
+        margin-top: 3%;
+        text-align: center;
+    }
+   .business{
+        h3{
+            color: $secondry-color;
+            font-weight: 700;
+            font-size: $title-block;
+        }
+        ul{
+            li{
+                padding: 20px;
+                border-bottom: 1px solid $blue-color;
+                color: $p-dark;
+                width: 50%;
+                @include res($screen-sm-min){
+                    width: 100%;
+                }
+            }
+        }
+   }
+   .partner{
+        h3{
+            color: $secondry-color;
+            font-weight: 700;
+            font-size: $title-block;
+        }
+        .img-part{
+            width: 100%;
+            img{
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                margin: 30px;
+            }
+        }
+   }
+}

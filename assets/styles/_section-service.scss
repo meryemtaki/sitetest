@@ -61,7 +61,10 @@
             img{
                 top: 10%;
                 position: absolute;
-                z-index: 10;
+                z-index: 7;
+                width: 580px;
+                height: 470px;
+                object-fit: cover;
                 @include res($screen-sm-min){
                     width: 300px;
                     position: relative;
@@ -75,6 +78,7 @@
         .text-bgservice{
             background: $bg-dark ;
             padding: 150px;
+            margin-bottom: 15%;
             @include res($screen-sm-min){
                 padding: 12px;
             }

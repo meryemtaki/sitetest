@@ -56,42 +56,6 @@
             margin-bottom: 10%;
         }
    }
-    form{
-        label{
-            color: $secondry-color;
-            width:120px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
-        }
-        input,textarea{
-            background-color: $bg-dark;
-            border: 1px solid $secondry-color;
-            border-radius: 10px;
-            height: 30px;
-        }
-        textarea{
-            width: 566px;
-            height: 170px;
-            display: block;
-            margin-bottom: 5%;
-            @include res($screen-sm-min){
-                width: 300px;
-                height: 150px;
-            }
-        }
-        button{
-            background: $orange-color;
-            padding:10px;
-            border: 1px solid $orange-color;
-            border-radius: 10px;
-            color: $secondry-color;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-    }
     #map{
         margin-top: 5%;
     }

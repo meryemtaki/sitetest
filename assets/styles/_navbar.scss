@@ -33,19 +33,17 @@ body.overflow{
                 padding: 70px;
                 transform: translateY(-200%);
                 position:absolute;
-                width: 100%;
                 background: $primary-color;
                 z-index: 1;
                 top: 0;
                 right: 0;
-                height: calc(100vh - 50px);
                 display: block;
-                transition-duration: .6s;
+                left: -12px;
+                max-height: calc(100vh - 80px);
+                overflow: auto;
+                width: 100vw;
                 &.open {
                     transform: translateY(0);
-                    @include res($screen-sm-min){
-                        overflow: scroll;
-                    }
                 }
                 
                 .left{
@@ -72,6 +70,45 @@ body.overflow{
                                 font-weight: 700;
                                 font-size: 10px;
                                 color: $orange-color;
+                            }
+                        }
+                    }
+                    .menu-item-child{
+                        position: relative;
+                        .arrow{
+                            height: 30px;
+                            position: absolute;
+                            right: 15px;
+                            top: 7px;
+                            font-size: 15px;
+                            color: $p-dark;
+                            cursor: pointer;
+                            &.show+ul {
+                                display: block;
+                            }
+                        }
+                        .submenu{
+                            display: none;
+                            padding-left: 60px;
+                            transition: .5s;
+                            li{
+                                margin: 15px;
+                                a{
+                                    text-decoration: none;
+                                    color: $secondry-color;
+                                    font-size: 15px;
+                                    font-weight: 700;
+                                    @include res($screen-sm-min){
+                                        font-size: 12px;
+                                    }
+                                    span{
+                                        font-weight: 700;
+                                        font-size: 8px;
+                                        color: $orange-color;
+                                    }
+                                    
+                                    position: relative;
+                                }
                             }
                         }
                     }
