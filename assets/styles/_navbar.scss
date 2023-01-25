@@ -56,6 +56,12 @@ body.overflow{
                         border-right: none;
                         border-bottom: 1px solid $orange-color;
                     }
+                    @include res($screen-md-min){
+                        width: 100%;
+                        float: none;
+                        border-right: none;
+                        border-bottom: 1px solid $orange-color;
+                    }
                     li{
                         margin-bottom: 6%;
                         a{
@@ -117,6 +123,10 @@ body.overflow{
                     float: right;
                     width: 35%;
                     @include res($screen-sm-min){
+                        float: none;
+                        width: 100%;
+                    }
+                    @include res($screen-md-min){
                         float: none;
                         width: 100%;
                     }

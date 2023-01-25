@@ -16,6 +16,10 @@
                     width: 490px;
                     height: 300px;
                     object-fit: cover;
+                    @include res($screen-md-min){
+                        width: 350px;
+                        height: 180px;
+                    }
                 }
                 .text-item{
                     bottom: 50px;
@@ -25,8 +29,8 @@
                     position: relative;
                     z-index: 1;
                     background : $bg-dark;
-                    @include res($screen-sm-min){
-                        
+                    @include res($screen-md-min){
+                        padding: 15px;
                     }
                     h4{
                         font-size: $title-block;

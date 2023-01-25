@@ -44,9 +44,23 @@ $('.slide').slick({
     autoplaySpeed: 2000,
     responsive: [
         {
-          breakpoint: 576,
+          breakpoint: 577,
           settings: {
             slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        {
+            breakpoint: 769,
+            settings: {
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+            },
+        },
+        {
+          breakpoint: 993,
+          settings: {
+            slidesToShow: 1.5,
             slidesToScroll: 1,
           },
         },

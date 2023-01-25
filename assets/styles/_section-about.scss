@@ -24,7 +24,7 @@
             color: $secondry-color;
             font-weight: 700;
             text-transform: uppercase;
-            @include res($screen-sm-min){
+            @include res($screen-sm-min);@include res($screen-md-min);@include res($screen-lg-min){
                 font-size: $title-block;
                 text-align: left;
                 margin-right: 0;

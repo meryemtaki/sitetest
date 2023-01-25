@@ -31,11 +31,13 @@
         @include res($screen-sm-min){
             text-align: center;
         }
+        
         img{
             border-radius: 50%;
             padding-bottom: 15px;
         }
         h4{
+            text-align: left;
             a{
                 text-decoration: none;
                 font-size: $title-block;
@@ -48,6 +50,14 @@
             font-size: 15px;
             line-height: 25px;
             @include res($screen-sm-min){
+                width: 100%;
+                font-size: 12px;
+            }
+            @include res($screen-md-min){
+                width: 100%;
+                font-size: 12px;
+            }
+            @include res($screen-lg-min){
                 width: 100%;
                 font-size: 12px;
             }
@@ -65,22 +75,35 @@
                 width: 580px;
                 height: 470px;
                 object-fit: cover;
-                @include res($screen-sm-min){
-                    width: 300px;
+                @include res($screen-sm-min);@include res($screen-md-min){
                     position: relative;
                     margin-bottom: 5%;
                     background-color: $bg-dark ;
                     padding: 25px;
                     width: 90%;
                 }
+                @include res($screen-md-min){
+                    width: 450px;
+                    height: 400px;
+                }
+                @include res($screen-lg-min){
+                    width: 350px;
+                    height: 250px;
+                }
+                
             }
         }
         .text-bgservice{
             background: $bg-dark ;
             padding: 150px;
             margin-bottom: 15%;
-            @include res($screen-sm-min){
+            @include res($screen-sm-min);@include res($screen-md-min){
                 padding: 12px;
+            }
+            @include res($screen-lg-min){
+                padding: 20px;
+                width: 50%;
+                float: right;
             }
             h2{
                 font-size: $title-section;
@@ -92,15 +115,18 @@
                 margin-bottom: 40px;
                 font-weight: 700;
                 text-transform: uppercase;
-                @include res($screen-sm-min){
+                @include res($screen-sm-min);@include res($screen-lg-min){
                     font-size: 22px;
+                }
+                @include res($screen-md-min){
+                    font-size: 25px;
                 }
             }
             p{
                 color: $p-dark;
                 font-size: 15px;
                 line-height: 25px;
-                @include res($screen-sm-min){
+                @include res($screen-sm-min);@include res($screen-lg-min){
                     font-size: 12px;
                 }
             }
